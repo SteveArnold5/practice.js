@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="main.js"></script>
+		<script src="Form.js"></script>
+		<script src="Group.js"></script>
+		<ccript src="Form.js"></script>
+		<script src="Field.js"></script>
+		<script>
+			$(document).ready(function(){
+				var form = 
+				{ 
+				    "name" : "user form",
+				    "groups" : [ 
+						{ 
+								"name" : "Credentials",
+								"fields" : [
+									{
+										"name" : "username",
+										"label" : "Username",
+										"type" : "text" 
+							 		},
+									{
+										"name" : "password",
+										"label" : "Password",
+										"type" : "text" 
+							 		}
+								] 
+							}
+						]
+				}
+				addChildElements($("body"),[form], Form);
+			})
+		</script>
+<body>
+	
+</body>
