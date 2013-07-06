@@ -1,0 +1,1 @@
+One man's attempt at writing clean, professional, modular javascript.
