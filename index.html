@@ -7,6 +7,7 @@
 		<script src="Group.js"></script>
 		<ccript src="Form.js"></script>
 		<script src="Field.js"></script>
+		<script src="ElementManipulator.js"></script>
 		<script>
 			$(document).ready(function(){
 				var form = 
@@ -30,7 +31,8 @@
 							}
 						]
 				}
-				addChildElements($("body"),[form], Form);
+				var em = new ElementManipulator();
+				em.addChildElements($("body"),[form], Form);
 			})
 		</script>
 <body>
