@@ -8,6 +8,7 @@
 		<script src="modules/formBuilder/Group.js"></script>
 		<script src="modules/formBuilder/Field.js"></script>
 		<script src="modules/formBuilder/TextFieldCreator.js"></script>
+		<script src="modules/formBuilder/SelectFieldCreator.js"></script>
 		<script>
 			$(document).ready(function(){
 				var form = 
@@ -26,6 +27,15 @@
 										"name" : "firstName",
 										"label" : "First Name",
 										"fieldType" : "TextField" 
+							 		},
+									{
+										"name" : "state",
+										"label" : "State",
+										"fieldType" : "SelectField" ,
+										"selectOptions" : [
+											{ "text" : "Virginia", "value" : "VA"},
+											{ "text" : "North Carolina", "value" : "NC" }
+										]
 							 		}
 								] 
 							}
