@@ -1,16 +1,7 @@
 <html>
 	<head>
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script src="scripts/main.js"></script>
-		<script src="scripts/modules/utils/TypeConverter.js"></script>
-		<script src="scripts/modules/utils/ElementManipulator.js"></script>
-		<script src="scripts/modules/formBuilder/Form.js"></script>
-		<script src="scripts/modules/formBuilder/Group.js"></script>
-		<script src="scripts/modules/formBuilder/Field.js"></script>
-		<script src="scripts/modules/formBuilder/TextFieldCreator.js"></script>
-		<script src="scripts/modules/formBuilder/SelectFieldCreator.js"></script>
+		<script src="jam/require.js"></script>
 		<script>
-			$(document).ready(function(){
 				var form = 
 				{ 
 				    "name" : "user form",
@@ -21,17 +12,17 @@
 									{
 										"name" : "username",
 										"label" : "Username",
-										"fieldType" : "TextField" 
+										"fieldType" : "textField" 
 							 		},
 									{
 										"name" : "firstName",
 										"label" : "First Name",
-										"fieldType" : "TextField" 
+										"fieldType" : "textField" 
 							 		},
 									{
 										"name" : "state",
 										"label" : "State",
-										"fieldType" : "SelectField" ,
+										"fieldType" : "selectField" ,
 										"selectOptions" : [
 											{ "text" : "Virginia", "value" : "VA"},
 											{ "text" : "North Carolina", "value" : "NC" }
@@ -41,10 +32,9 @@
 							}
 						]
 				}
-				var em = new ElementManipulator();
-				em.addChildElements($("body"),[form], Form);
-			})
+				require(['scripts/app'], function (App) {
+		      App.init(form);
+		   });
 		</script>
 <body>
-	
 </body>

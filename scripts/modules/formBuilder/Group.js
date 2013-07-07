@@ -1,6 +1,7 @@
-function Group(){}
-
-Group.prototype.createElement = function(){
-	var em = new ElementManipulator();
-	return em.createElement("<fieldset></fieldset>", this.fields, Field);
-}
+define(['jquery', 'scripts/modules/utils/ElementManipulator', 'scripts/modules/formBuilder/Field'], function($, em, field) {
+	return {
+		createElement : function(){
+			return em.createElement("<fieldset></fieldset>", this.fields, field);
+		}	
+	};	
+});
